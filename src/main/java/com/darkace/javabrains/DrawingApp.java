@@ -1,11 +1,16 @@
 package com.darkace.javabrains;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
 /**
  * Created by rumman on 11/5/16.
  */
 public class DrawingApp {
     public static void main(String[] args) {
-        Triangle triangle = new Triangle();
+        BeanFactory beanFactory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
+        Triangle triangle = (Triangle) beanFactory.getBean("triangle");
         triangle.draw();
     }
 }
