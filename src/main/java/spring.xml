@@ -10,4 +10,12 @@
         <constructor-arg value="20"/>
     </bean>
 
+    <bean id="triangle2" class="com.darkace.javabrains.Triangle">
+        <constructor-arg type="java.lang.String" value="Equilateral"/>
+    </bean>
+
+    <bean id="triangle3" class="com.darkace.javabrains.Triangle">
+        <constructor-arg type="int" value="20"/>
+    </bean>
+
 </beans>

@@ -13,6 +13,14 @@ public class Triangle {
         this.height = height;
     }
 
+    public Triangle(int height) {
+        this.height = height;
+    }
+
+    public Triangle(String type) {
+        this.type = type;
+    }
+
     public String getType() {
         return type;
     }
