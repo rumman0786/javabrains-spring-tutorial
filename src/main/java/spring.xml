@@ -18,4 +18,8 @@
         <constructor-arg type="int" value="20"/>
     </bean>
 
+    <bean id="triangle4" class="com.darkace.javabrains.Triangle">
+        <constructor-arg index="0" value="Isoscales"/>
+        <constructor-arg index="1" value="30"/>
+    </bean>
 </beans>

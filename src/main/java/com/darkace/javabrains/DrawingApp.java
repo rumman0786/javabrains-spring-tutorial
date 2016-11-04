@@ -21,5 +21,9 @@ public class DrawingApp {
 
         Triangle triangle3 = (Triangle) context.getBean("triangle3");
         triangle3.draw();
+
+        Triangle triangle4 = (Triangle) context.getBean("triangle4");
+        triangle4.draw();
+
     }
 }
