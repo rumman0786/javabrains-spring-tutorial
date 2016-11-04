@@ -5,7 +5,13 @@ package com.darkace.javabrains;
  */
 public class Triangle {
 
+    private int height;
     private String type;
+
+    public Triangle(String type, int height) {
+        this.type = type;
+        this.height = height;
+    }
 
     public String getType() {
         return type;
@@ -16,7 +22,7 @@ public class Triangle {
     }
 
     public void draw() {
-        System.out.println("Triangle Drawn of type: " + type);
+        System.out.println("Triangle Drawn of type: " + type + " of height: " + height);
     }
 
 }
