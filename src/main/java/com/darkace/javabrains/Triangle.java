@@ -5,32 +5,37 @@ package com.darkace.javabrains;
  */
 public class Triangle {
 
-    private int height;
-    private String type;
+    Point pointA;
+    Point pointB;
+    Point pointC;
 
-    public Triangle(String type, int height) {
-        this.type = type;
-        this.height = height;
+    public Point getPointA() {
+        return pointA;
     }
 
-    public Triangle(int height) {
-        this.height = height;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
     }
 
-    public Triangle(String type) {
-        this.type = type;
+    public Point getPointB() {
+        return pointB;
     }
 
-    public String getType() {
-        return type;
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public Point getPointC() {
+        return pointC;
+    }
+
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
     }
 
     public void draw() {
-        System.out.println("Triangle Drawn of type: " + type + " of height: " + height);
+        System.out.println(pointA);
+        System.out.println(pointB);
+        System.out.println(pointC);
     }
-
 }

@@ -6,20 +6,24 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="triangle" class="com.darkace.javabrains.Triangle">
-        <constructor-arg value="Equilateral"/>
-        <constructor-arg value="20"/>
+        <property name="pointA" ref="zeroPoint"></property>
+        <property name="pointB" ref="pointB"></property>
+        <property name="pointC" ref="pointC"></property>
     </bean>
 
-    <bean id="triangle2" class="com.darkace.javabrains.Triangle">
-        <constructor-arg type="java.lang.String" value="Equilateral"/>
+    <bean id="zeroPoint" class="com.darkace.javabrains.Point">
+        <property name="x" value="0"></property>
+        <property name="y" value="0"></property>
     </bean>
 
-    <bean id="triangle3" class="com.darkace.javabrains.Triangle">
-        <constructor-arg type="int" value="20"/>
+    <bean id="pointB" class="com.darkace.javabrains.Point">
+        <property name="x" value="20"></property>
+        <property name="y" value="0"></property>
     </bean>
 
-    <bean id="triangle4" class="com.darkace.javabrains.Triangle">
-        <constructor-arg index="0" value="Isoscales"/>
-        <constructor-arg index="1" value="30"/>
+    <bean id="pointC" class="com.darkace.javabrains.Point">
+        <property name="x" value="0"></property>
+        <property name="y" value="20"></property>
     </bean>
+
 </beans>
