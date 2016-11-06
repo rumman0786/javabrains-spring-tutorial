@@ -24,7 +24,7 @@ public class DrawingApp {
         triangle.draw();
 
         System.out.println("================");
-        // No new object created returned prev trianle as scope is not defined and default singleton scope is used
+        // New object created returned new trianle as scope is prototype 
         Triangle triangle2 = (Triangle) context.getBean("triangle");
         triangle2.draw();
     }
