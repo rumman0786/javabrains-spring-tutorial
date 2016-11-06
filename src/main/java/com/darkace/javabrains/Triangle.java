@@ -1,41 +1,25 @@
 package com.darkace.javabrains;
 
+import java.util.List;
+
 /**
  * Created by rumman on 11/5/16.
  */
 public class Triangle {
 
-    Point pointA;
-    Point pointB;
-    Point pointC;
+    List<Point> points;
 
-    public Point getPointA() {
-        return pointA;
+    public List<Point> getPoints() {
+        return points;
     }
 
-    public void setPointA(Point pointA) {
-        this.pointA = pointA;
-    }
-
-    public Point getPointB() {
-        return pointB;
-    }
-
-    public void setPointB(Point pointB) {
-        this.pointB = pointB;
-    }
-
-    public Point getPointC() {
-        return pointC;
-    }
-
-    public void setPointC(Point pointC) {
-        this.pointC = pointC;
+    public void setPoints(List<Point> points) {
+        this.points = points;
     }
 
     public void draw() {
-        System.out.println(pointA);
-        System.out.println(pointB);
-        System.out.println(pointC);
+        for (Point point: points) {
+            System.out.println(point);
+        }
     }
 }
