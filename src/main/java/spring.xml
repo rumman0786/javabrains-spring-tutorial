@@ -5,10 +5,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="triangle" class="com.darkace.javabrains.Triangle" autowire="byName" scope="prototype">
+    <bean id="parentTriangle" class="com.darkace.javabrains.Triangle">
         <property name="points">
             <list>
-                <ref bean="zeroPoint" />
+                <ref bean="zeroPoint"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="triangle" class="com.darkace.javabrains.Triangle" autowire="byName" parent="parentTriangle">
+        <property name="points">
+                <list merge="true">
+                <!--<ref bean="zeroPoint" />-->
                 <ref bean="pointB" />
                 <ref bean="pointC" />
             </list>
