@@ -14,8 +14,18 @@ public class DrawingApp {
 //        BeanFactory beanFactory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Triangle triangle = (Triangle) context.getBean("triangle");
+        System.out.println("================");
+        triangle.draw();
+        Point point = new Point();
+        point.setX(222);
+        point.setY(444);
+        triangle.getPoints().add(point);
+        System.out.println("================");
         triangle.draw();
 
-
+        System.out.println("================");
+        // No new object created returned prev trianle as scope is not defined and default singleton scope is used
+        Triangle triangle2 = (Triangle) context.getBean("triangle");
+        triangle2.draw();
     }
 }
